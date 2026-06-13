@@ -1,0 +1,25 @@
+# ==========================================
+# Terraform Variables Values (Example)
+# ==========================================
+
+# Target AWS Region for deployment
+aws_region = "us-east-1"
+
+# Application Name prefix for all resources
+app_name = "secure-aws-cicd-app"
+
+# Deployment Environment
+environment = "production"
+
+# Your GitHub Repository (Owner/Repo) for configuring OIDC role trust.
+# Replace with your actual repository to allow your GitHub workflow to deploy.
+github_repo = "Rohit24-devOp/Cloud-Security-Monitoring-WAF-Protection-Platform"
+
+# Set to true to use NAT Gateway (secure, isolated task networking).
+# Set to false to run Fargate in public subnets with public IPs (free-tier / cost-saving friendly).
+use_nat_gateway = false
+
+# Fargate Resource Configurations (low values for cost optimization)
+fargate_cpu    = 256  # 0.25 vCPU
+fargate_memory = 512  # 0.5 GB RAM
+desired_count  = 1
